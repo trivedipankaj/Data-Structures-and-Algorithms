@@ -1,11 +1,9 @@
+
 /**
 @author Pankaj Trivedi
-@desc Implementation of basic linked list.
+@desc Reverse a singly linked list
 @created 23-05-2011
 */
-
-
-
 #include<iostream>
 using namespace std;
 
@@ -46,6 +44,19 @@ void print(node *head){
 	}
 }
 
+node *reverse(node *head){
+	if(head !=NULL){
+	        node *current = NULL;
+             node *temp;
+             while(head !=NULL){
+                temp = head;
+                head = head->next;
+                temp->next = current;
+                current   = temp;	
+	     }
+           return current;	
+	}
+}
 
 main(){
      node *head = NULL;
@@ -55,7 +66,9 @@ main(){
      head     =  insert(head,83);	
      head     =  insert(head,53);	
      head     =  insert(head,63);	
-      print(head);
-     
-
+     print(head); cout<<endl;
+     head      = reverse(head);
+     print(head);
+     system("pause");
 }
+
