@@ -43,7 +43,9 @@ void print(node *head){
             cout<<p->data;
 	}
 }
-
+/**
+iterative reverse of a linked list
+**/
 node *reverse(node *head){
 	if(head !=NULL){
 	        node *current = NULL;
@@ -58,6 +60,21 @@ node *reverse(node *head){
 	}
 }
 
+/**
+recursive reverse of singly linked list
+*/
+
+node *rec_reverse(node *current, node *head){
+
+     if(head == NULL){
+             return current;
+     }else{
+           node *temp = head->next;
+           head->next =current;
+           return rec_reverse(head,temp);
+           }    
+}
+
 main(){
      node *head = NULL;
      head     =  insert(head,23);	
@@ -67,7 +84,7 @@ main(){
      head     =  insert(head,53);	
      head     =  insert(head,63);	
      print(head); cout<<endl;
-     head      = reverse(head);
+     head      = rec_reverse(NULL,head);
      print(head);
      system("pause");
 }

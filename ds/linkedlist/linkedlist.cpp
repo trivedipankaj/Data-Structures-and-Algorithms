@@ -19,6 +19,9 @@ node *newNode(int data){
         nn->next = NULL;
 }
 
+/**
+iterative insertion
+*/
 node *insert(node *head, int data){
 	 if(head == NULL){
 	  return newNode(data);
@@ -33,6 +36,18 @@ node *insert(node *head, int data){
 	}
 	
 }
+/** 
+recursive insertion
+*/
+
+node *rec_insert(node *head, int data){
+        if(head == NULL){
+                return newNode(data);
+        }else{
+              head->next = rec_insert(head->next,data);
+        }
+        return head;
+} 
 
 void print(node *head){
 	if(head !=NULL){
@@ -49,13 +64,13 @@ void print(node *head){
 
 main(){
      node *head = NULL;
-     head     =  insert(head,23);	
-     head     =  insert(head,13);	
-     head     =  insert(head,43);	
-     head     =  insert(head,83);	
-     head     =  insert(head,53);	
-     head     =  insert(head,63);	
+     head     =  rec_insert(head,23);	
+     head     =  rec_insert(head,13);	
+     head     =  rec_insert(head,43);	
+     head     =  rec_insert(head,83);	
+     head     =  rec_insert(head,53);	
+     head     =  rec_insert(head,63);	
       print(head);
-     
+     system("pause");
 
 }
