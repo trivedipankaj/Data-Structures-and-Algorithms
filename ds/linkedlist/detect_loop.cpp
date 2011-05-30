@@ -50,7 +50,7 @@ bool detect_loop( node *head){
      if(head != NULL){
              node *slow = head;
              node *fast = head;
-             while( slow->next != NULL && fast->next->next != NULL){
+             while( slow->next != NULL && fast->next->next != NULL && fast->next !=NULL){
                      slow   = slow->next;
                      fast   = fast->next->next;
                      if(slow == fast)
@@ -69,6 +69,7 @@ main(){
      head     =  insert(head,83);	
      head     =  insert(head,53);	
      head     =  insert(head,63);	
+     head     =  insert(head,87);
      /**lets have a loop*/
      head->next->next->next = head->next;
      if(detect_loop(head)){
