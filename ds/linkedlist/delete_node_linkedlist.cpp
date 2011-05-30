@@ -1,7 +1,7 @@
 
 /**
 @author Pankaj Trivedi
-@desc Reverse a singly linked list
+@desc deleting a node at given position in  a singly linked list
 @created 23-05-2011
 */
 #include<iostream>
