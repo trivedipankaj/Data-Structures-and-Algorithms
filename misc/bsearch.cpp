@@ -1,3 +1,8 @@
+/**
+count the number of occurrences in a give array
+Given a sorted array arr[] and a number x, write a function that counts the occurrences of x in arr[]. Expected time complexity is O(Logn)
+*/
+
 #include<iostream>
 using namespace std;
 
@@ -30,7 +35,7 @@ int lbsearch(int a[], int low, int high, int n){
 }
 
 main(){
-	int a[] = {2,5,6,7,9,11,34};
+	int a[] = {2,5,6,7,9,12,12,12,34};
         int low=0, high,n;
         int f,l;
         n=12;
