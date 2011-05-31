@@ -23,7 +23,9 @@ node *newNode(int data){
      
  node *insert(node *head,int data,node **end){
       if( head == NULL ){
-          return newNode(data);
+          node *nn = newNode(data);
+          *end     = nn;
+          return nn;
       }else{
             node *hp     = head;
             node *p      = newNode(data);
