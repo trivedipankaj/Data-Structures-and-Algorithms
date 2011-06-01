@@ -1,6 +1,6 @@
 /**
 @author Pankaj Trivedi
-@desc Construction of a binary search tree. 
+@desc Sum of all the nodes of a binary search tree. 
 @created May 28th,2011 00:20 IST.
 **/
 
