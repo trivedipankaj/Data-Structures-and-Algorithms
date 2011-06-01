@@ -1,6 +1,6 @@
 /**
 @author Pankaj Trivedi
-@desc Construction of a binary search tree. 
+@desc Number of nodes for a binary search tree. 
 @created May 28th,2011 00:20 IST.
 **/
 
