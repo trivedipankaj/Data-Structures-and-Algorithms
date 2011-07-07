@@ -77,14 +77,7 @@ node *predecessor(node *root){
      return y;   
 }
 
-void delete_node(node &head){
-     node *root = &head;
-     cout<<"Deleting"<<root->data;
-     if(root->left ==NULL && root->right ==NULL){
-            cout<<"There we go!";
-            root->parent->left = NULL;              
-     } 
-}
+
 int max(int a,int b){
     if(a>b) return a; else return b;    
 }
