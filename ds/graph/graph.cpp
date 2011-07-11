@@ -97,6 +97,7 @@ void removeEdge(graph *&g, int u, int v){
 	     if(!g->directed){
 		removeEdge(g,v,u);	
 	     }
+	    g->edges--;
 	}
 }
 
