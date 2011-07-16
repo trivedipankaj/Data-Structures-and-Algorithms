@@ -43,7 +43,7 @@ main(){
 	   if(res!=""){
 	       cout<<res<<endl;	
 	   }else{
-		cout<<"No such window exsit!"<<endl;
+		cout<<"No such window exist!"<<endl;
 	  }
 	
       }
