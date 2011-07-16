@@ -7,7 +7,6 @@ struct node{
        int data;
        node *left;
        node *right;
-       bool visited;
 };
 
 node *newNode(int data){
@@ -15,7 +14,6 @@ node *newNode(int data){
      nn->data  = data;
      nn->left = NULL;
      nn->right = NULL;
-     nn->visited =false;
      return nn;
 }
 
@@ -49,14 +47,11 @@ vector<node*> v;
 
 void print_boundary(node *root){
 	if(root !=NULL){
-		if(!root->visited){
-		     if(root->left ==NULL && root->right ==NULL)
+		if(root->left ==NULL && root->right ==NULL)
 		       cout<<root->data<<" "; 
-		     root->visited = true;
-		}
-		if(root->left && !root->left->visited)
+		if(root->left )
 			print_boundary(root->left);
-		if(root->right && !root->right->visited)
+		if(root->right)
 			print_boundary(root->right);
 
 	}
