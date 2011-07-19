@@ -78,6 +78,20 @@ node *reverse(node *head){
      }     
 }
 
+node *myreverse(node *head){
+	if(head){
+		node *curr = head;
+		node *temp = NULL;
+		while(curr){
+		 	temp = curr->prev;
+			curr->prev = curr->next;
+			curr->next = temp;
+			curr      =  curr->prev;	
+		}
+	   return temp->prev;	
+	}
+}
+
 main(){
        node *start = NULL, *end = NULL;
        start  = insert(start,12,&end);
@@ -86,9 +100,8 @@ main(){
        start  = insert(start,312,&end);
        printForward(start);
        printBackward(end);
-       start = reverse(start);
+       start = myreverse(start);
        printForward(start);
        
-       system("pause");
        
        }
