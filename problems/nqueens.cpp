@@ -65,12 +65,12 @@ void nqueens(int a[][N], int row){
 		/***
 		Try for all the columns for the current row, if there is safe place for queen to 
 		be placed at a column, then place the queen there and recurse for the rest of the rows.
-		This will print all the solutions of the NQUEENS as we are not stopping by finding a solution
+		This will print all the solutions of the NQEENS as we are not stopping by finding a solution
 		*/
 		for(int i=0; i<N; i++){
 			if(isSafe(a,row,i)){
 				
-				//place the queen at this location as it is safe 
+				//place the qeen at this location as it is safe 
 				a[row][i] = 1;
 
 				nqueens(a,row+1);
